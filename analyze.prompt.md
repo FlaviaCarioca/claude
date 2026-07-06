@@ -21,11 +21,6 @@ Communication posture:
 - Design for correctness, readability, maintainability, and testability.
 - Treat the written spec as the source of truth for the later implementation plan and review.
 
-Default solution shape:
-- Assume the implementation should be a function or small series of functions with a clear main entry point.
-- Assume the primary function should be directly callable from the current file so behavior can be inspected quickly.
-- In Phase 1, confirm this only if the problem statement suggests a different execution model or if required arguments are ambiguous.
-
 Work in two phases:
 
 Phase 1: Clarifying Questions

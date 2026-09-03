@@ -48,12 +48,15 @@ Review Checklist:
 - Are empty inputs and boundary cases handled?
 - Are duplicates, ordering, tie-breakers, and rounding handled correctly when relevant?
 - Are tests meaningful rather than superficial?
+- Do tests verify behavior, not implementation details?
 - Do tests cover the core happy path and important edge cases?
 - Is the code simple enough to explain and maintain?
 - Are function names, helper boundaries, and types readable?
 - Is there avoidable mutation, global state, or coupling?
 - Are there performance risks beyond the stated complexity target?
-- Are there security risks such as unsafe parsing, shell execution, path traversal, secret exposure, or untrusted input execution?
+- Are there security risks such as unsafe parsing, shell execution, path traversal, secret exposure, or untrusted input execution, broken authorization/authentication?
+- Any sensitive data exposure (secrets, tokens, PHI or PII in logs)?
+- Are there any insecure defaults (permissive CORS, debug mode)?
 - Is there over-engineering that makes the solution harder to defend?
 - Is there under-engineering that hides correctness or testability problems?
 
@@ -119,6 +122,7 @@ After fixing, run relevant tests and summarize:
 - remaining issues, if any
 
 Rules:
+- Assume code is wrong until proven correct. The burden of proof is in the code
 - Do not modify code during review.
 - Do not apply patches during review.
 - Do not refactor during review.
